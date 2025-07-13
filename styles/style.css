@@ -23,36 +23,59 @@ html {
   --second-pera-font-size: 1.16rem;
   --laptop-width: 80.61%;
   --secondary-color: rgb(230, 83, 60);
+  --button-color: rgb(230, 83, 60);
 }
 /* common css style */
 body {
   font-family: "Inter", sans-serif;
 }
-/*   font-family: "Inter", sans-serif;
-  font-family: secondary-font; */
+.btn {
+  background-color: var(--button-color);
+  font-size: 1.5rem;
+  padding: 16px 40px;
+  border: 1px solid var(--button-color);
+  border-radius: 42px;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.7s;
+}
+.btn:hover {
+  background-color: transparent;
+  color: var(--button-color);
+}
+
+/* Header  */
+header {
+  background-image: linear-gradient(
+    180deg,
+    rgb(17, 17, 17),
+    rgba(119, 119, 119, 0) 100%
+  );
+  background-color: black;
+  padding-top: 52px;
+}
 
 /* Nav section */
 nav {
   border: 1px solid black;
   width: var(--laptop-width);
-  margin: 45px auto 20px;
+  margin: 0 auto 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 nav h2 {
   font-size: 3rem;
   font-weight: 800;
   color: var(--secondary-color);
 }
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 nav > ul {
   display: flex;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 39px;
-  border: 1px solid black;
 }
 nav ul,
 i {
@@ -65,11 +88,104 @@ nav li a {
   display: inline-block;
   border-radius: 39px;
   transition: 0.5s;
+  font-weight: 600;
+  color: white;
 }
 nav li a:hover {
   background-color: var(--secondary-color);
-  color: white;
 }
 .icon {
   display: none;
+}
+
+/* Banner section */
+.banner_container {
+  width: var(--laptop-width);
+  margin: 0px auto;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+}
+.banner_container h1 {
+  font-size: 6.5rem;
+  font-size: 78px;
+  font-weight: 900;
+  line-height: 120%;
+  color: white;
+}
+.banner_container h1 span {
+  font-family: secondary-font;
+}
+.banner_container p {
+  font-size: 1.33rem;
+  margin: 20px 0;
+  color: var(--pera-color);
+}
+
+.banner_image_container {
+  border: 1px solid pink;
+  width: 100%;
+  text-align: right;
+}
+.banner_container .banner_right {
+  position: relative;
+}
+.banner_container .banner_right img {
+  border: 10px solid green;
+}
+.video_tutorial_container {
+  border: 1px solid pink;
+  display: flex;
+  align-items: center;
+  padding: 12px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  background: rgba(48, 48, 48, 0.54);
+  width: fit-content;
+  position: absolute;
+  bottom: 88px;
+  left: 77px;
+}
+.video_tutorial_container .video_tutorial_left {
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.video_tutorial_container .video_tutorial_right h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  color: white;
+}
+.video_tutorial_container .video_tutorial_right p {
+  font-size: 1.33rem;
+  margin-bottom: 0px;
+}
+.banner_container .workout_video_container {
+  border: 1px solid pink;
+  align-items: center;
+  padding: 12px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  background: rgba(48, 48, 48, 0.54);
+  width: fit-content;
+  position: absolute;
+  top: 143px;
+  right: -95px;
+}
+.banner_container .workout_video_container h2 {
+  font-weight: 900;
+  line-height: 40px;
+  letter-spacing: 1px;
+  font-size: 3.33rem;
+  color: white;
+}
+.banner_container .workout_video_container p {
+  margin: 10px 0 0px;
 }
