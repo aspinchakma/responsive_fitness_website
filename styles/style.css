@@ -9,6 +9,25 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+/* reset html font size */
+html {
+  font-size: 12px;
+}
+
+/* custom variable */
+:root {
+  --pera-color: rgba(255, 255, 255, 0.5);
+  --first-pera-font-size: 1.33rem;
+  --second-pera-font-size: 1.16rem;
+  --first-header-font-size: 6.5rem;
+  --second-header-font-size: 5.83rem;
+  --third-header-font-sze: 4rem;
+}
+/* common css style */
+body {
+  font-family: "Inter", sans-serif;
 }
 /*   font-family: "Inter", sans-serif;
   font-family: secondary-font; */
