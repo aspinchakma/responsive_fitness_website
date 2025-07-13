@@ -21,9 +21,8 @@ html {
   --pera-color: rgba(255, 255, 255, 0.5);
   --first-pera-font-size: 1.33rem;
   --second-pera-font-size: 1.16rem;
-  --first-header-font-size: 6.5rem;
-  --second-header-font-size: 5.83rem;
-  --third-header-font-sze: 4rem;
+  --laptop-width: 80.61%;
+  --secondary-color: rgb(230, 83, 60);
 }
 /* common css style */
 body {
@@ -31,3 +30,46 @@ body {
 }
 /*   font-family: "Inter", sans-serif;
   font-family: secondary-font; */
+
+/* Nav section */
+nav {
+  border: 1px solid black;
+  width: var(--laptop-width);
+  margin: 45px auto 20px;
+}
+nav h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav > ul {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 39px;
+  border: 1px solid black;
+}
+nav ul,
+i {
+  list-style: none;
+  font-size: 1.5rem;
+}
+nav li a {
+  text-decoration: none;
+  padding: 10px 22px;
+  display: inline-block;
+  border-radius: 39px;
+  transition: 0.5s;
+}
+nav li a:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.icon {
+  display: none;
+}
