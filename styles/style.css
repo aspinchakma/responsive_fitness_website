@@ -94,6 +94,7 @@ nav li a {
   border-radius: 39px;
   transition: 0.5s;
   font-weight: 600;
+  color: white;
 }
 nav li a:hover {
   background-color: var(--secondary-color);
@@ -194,6 +195,8 @@ nav li a:hover {
   width: var(--laptop-width);
   border: 1px solid black;
   margin: 100px auto;
+
+  transition: margin 2s;
 }
 .habits_container .habits {
   margin-top: 58px;
@@ -239,6 +242,140 @@ nav li a:hover {
   letter-spacing: 0.3px;
 }
 
+/* Extra run section */
+.run_extra_container {
+  width: var(--laptop-width);
+  border-radius: 18px;
+  background: rgb(34, 34, 34);
+  margin: 0px auto;
+  padding: 40px 32px 40px 54px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 165px;
+}
+.run_extra_container h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+.run_extra_container p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  margin: 14px 0px 22px;
+}
+.run_extra_container img {
+  border-radius: 18px;
+}
+
+/* training section */
+.training_container {
+  width: var(--laptop-width);
+  margin: 80px auto 90px;
+}
+.training_container .description_for_traning {
+  max-width: 671px;
+}
+.training_container .training_description .description_for_traning > h2 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+.training_container .training_description .description_for_traning > p {
+  font-size: 1.34rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  margin-top: 14px;
+}
+.training_container .training_img_container {
+  margin-top: 50px;
+}
+
+.training_img_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.training_img_container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.training_img_container > div {
+  position: relative;
+}
+.img1 {
+  grid-column: span 3;
+  overflow: hidden;
+  cursor: pointer;
+}
+.hover_text {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  display: flex;
+  align-items: end;
+  padding: 30px 15px;
+  background-color: rgba(6, 255, 210, 0.5);
+  transition: all;
+}
+.hover_text h3 {
+  color: black;
+}
+.img2 {
+  grid-column: span 5;
+}
+.bg_img_2 {
+  background-color: rgba(255, 0, 0, 0.3);
+  align-items: start;
+}
+.bg_img_2 h3 {
+  color: white;
+}
+.img3 {
+  grid-column: span 4;
+}
+.bg_img_3 {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.bg_img_3 h3 {
+  color: white;
+}
+.img4 {
+  grid-column: span 5;
+}
+.bg_img_4 {
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: end;
+  align-items: start;
+}
+.bg_img_4 h3 {
+  color: white;
+}
+.img5 {
+  grid-column: span 3;
+}
+.bg_img_5 {
+  background-color: rgba(66, 255, 0, 0.3);
+}
+.bg_img_5 h3 {
+  color: white;
+}
+.img6 {
+  grid-column: span 4;
+}
+.bg_img_6 {
+  background-color: rgba(0, 71, 255, 0.3);
+}
+.bg_img_6 h3 {
+  color: white;
+}
 /* Respinsive Design */
 @media screen and (max-width: 576px) {
   html {
@@ -248,7 +385,9 @@ nav li a:hover {
     padding: 14px 22px;
   }
   /* Nav bar */
-
+  header {
+    padding-top: 32px;
+  }
   nav {
     width: var(--phone-width);
   }
@@ -317,5 +456,35 @@ nav li a:hover {
     grid-template-columns: 1fr;
     grid-gap: 40px;
     padding: 0px 54px;
+  }
+
+  /* Run an extra mile section */
+  .run_extra_container {
+    width: var(--phone-width);
+    grid-template-columns: 1fr;
+    padding: 32px;
+    grid-column-gap: 0;
+  }
+  .run_extra_right img {
+    margin-top: 34px;
+    width: 100%;
+  }
+
+  /* training and excercises section */
+  .img1,
+  .img2,
+  .img3,
+  .img4 {
+    grid-column: span 6;
+  }
+  .img5,
+  .img6 {
+    display: none;
+  }
+  .training_container {
+    width: var(--phone-width);
+  }
+  .training_container .training_description .description_for_traning > h2 {
+    font-size: 5rem;
   }
 }
