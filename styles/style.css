@@ -29,6 +29,11 @@ html {
 /* common css style */
 body {
   font-family: "Inter", sans-serif;
+  background-color: black;
+  color: white;
+}
+body p {
+  color: var(--pera-color);
 }
 .btn {
   background-color: var(--button-color);
@@ -89,7 +94,6 @@ nav li a {
   border-radius: 39px;
   transition: 0.5s;
   font-weight: 600;
-  color: white;
 }
 nav li a:hover {
   background-color: var(--secondary-color);
@@ -111,7 +115,6 @@ nav li a:hover {
   font-size: 78px;
   font-weight: 900;
   line-height: 120%;
-  color: white;
 }
 .banner_container h1 span {
   font-family: secondary-font;
@@ -151,12 +154,13 @@ nav li a:hover {
   border-radius: 50%;
   margin-right: 10px;
 }
-
+.banner_left_first_button {
+  margin-right: 14px;
+}
 .video_tutorial_container .video_tutorial_right h2 {
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: 0.3px;
-  color: white;
 }
 .video_tutorial_container .video_tutorial_right p {
   font-size: 1.33rem;
@@ -180,10 +184,59 @@ nav li a:hover {
   line-height: 40px;
   letter-spacing: 1px;
   font-size: 3.33rem;
-  color: white;
 }
 .banner_container .workout_video_container p {
   margin: 10px 0 0px;
+}
+
+/* Habit Section */
+.habits_container {
+  width: var(--laptop-width);
+  border: 1px solid black;
+  margin: 100px auto;
+}
+.habits_container .habits {
+  margin-top: 58px;
+}
+.habits_container_desctription {
+  max-width: 671px;
+  text-align: center;
+  margin: 0px auto;
+}
+.habits_container_desctription h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 120%;
+}
+.habits_container_desctription p {
+  /* color: rgba(255, 255, 255, 0.5); */
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+.habits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  text-align: center;
+}
+.habit img {
+  border-radius: 50%;
+  border: 10px solid #1a1a1a;
+}
+.habit h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 120%;
+}
+.habit p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.3px;
 }
 
 /* Respinsive Design */
@@ -253,5 +306,16 @@ nav li a:hover {
   .video_tutorial_container {
     bottom: 187px;
     left: 16px;
+  }
+  /* Change habit  section */
+  .habits_container {
+    width: var(--phone-width);
+    margin: 40px auto 70px;
+  }
+  .habits {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    padding: 0px 54px;
   }
 }
