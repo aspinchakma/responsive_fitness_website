@@ -50,7 +50,9 @@ body p {
   background-color: transparent;
   color: var(--button-color);
 }
-
+button {
+  cursor: pointer;
+}
 /* Header  */
 header {
   background-image: linear-gradient(
@@ -489,6 +491,65 @@ td {
   margin-bottom: 20px;
 }
 
+/* Team section */
+.team_container {
+  width: var(--laptop-width);
+  margin: 0px auto;
+}
+.team_container .team_container_description {
+  max-width: 671px;
+  text-align: center;
+  margin: 0 auto;
+}
+.team_container .team_container_description h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+.team_container .team_container_description p {
+  margin: 14px 0 40px;
+  font-size: 1.2rem;
+}
+.teams {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  border-radius: 18px;
+}
+.teams .team {
+  position: relative;
+}
+.teams .team > div {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-origin: padding-box;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  flex-direction: column;
+}
+.teams .team img {
+  width: 100%;
+  border-radius: 18px;
+  height: 100%;
+  object-fit: cover;
+}
+.teams .team h4 {
+  font-size: 1.6rem;
+  /* margin-top: 85%; */
+}
+.teams .team p {
+  font-size: 1.3rem;
+}
+
 /* Respinsive Design */
 @media screen and (max-width: 576px) {
   html {
@@ -645,5 +706,26 @@ td {
   .option_two {
     width: 98%;
     margin-bottom: 20px;
+  }
+
+  /* Our team section */
+  .team_container {
+    width: var(--phone-width);
+  }
+
+  .mobile_hide {
+    display: none;
+  }
+  .teams {
+    grid-template-columns: 1fr;
+  }
+  .team {
+    height: 272px;
+  }
+  .teams .team h4 {
+    font-size: 2.3rem;
+  }
+  .teams .team p {
+    font-size: 1.8rem;
   }
 }
