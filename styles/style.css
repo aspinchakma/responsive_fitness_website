@@ -76,6 +76,7 @@ nav h2 {
   font-size: 3rem;
   font-weight: 800;
   color: var(--secondary-color);
+  font-style: italic;
 }
 
 nav > ul {
@@ -491,6 +492,54 @@ td {
   margin-bottom: 20px;
 }
 
+/* Product section */
+.product_container {
+  width: var(--laptop-width);
+  margin: 0px auto 60px;
+}
+.product_description {
+  max-width: 577px;
+  margin: 0px auto;
+  text-align: center;
+}
+.product_description h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.product_description p {
+  font-size: 1.34rem;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.products img {
+  width: 100%;
+}
+.product {
+  position: relative;
+  background-color: black;
+  cursor: pointer;
+}
+.product .button_container_parent {
+  background-color: rgba(0, 0, 0, 0.511);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.product:hover .button_container_parent {
+  display: block;
+}
+
 /* Team section */
 .team_container {
   width: var(--laptop-width);
@@ -550,6 +599,66 @@ td {
   font-size: 1.3rem;
 }
 
+/* footer container */
+footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 60px;
+  padding-top: 55px;
+  padding-bottom: 35px;
+}
+.footer_container {
+  width: var(--laptop-width);
+  margin: 0px auto;
+}
+.footer_container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 100px;
+  align-items: center;
+}
+.footer_left {
+  height: fit-content;
+}
+.footer_container h2 {
+  color: rgb(230, 83, 60);
+  font-size: 5.2rem;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: 0%;
+  font-style: italic;
+}
+.footer_container p {
+  font-size: 1.25rem;
+  margin-top: 20px;
+}
+.footer_container h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0%;
+  margin-bottom: 30px;
+}
+.footer_container ul {
+  list-style: none;
+}
+.footer_container li {
+  margin-bottom: 20px;
+}
+.footer_container ul li > a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.empty_div {
+  height: 1px;
+  width: var(--laptop-width);
+  margin: 56px auto 34px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.copyright {
+  text-align: center;
+  font-size: 1.5rem;
+}
 /* Respinsive Design */
 @media screen and (max-width: 576px) {
   html {
@@ -708,6 +817,19 @@ td {
     margin-bottom: 20px;
   }
 
+  /* Product container */
+  .product_container {
+    width: var(--phone-width);
+  }
+  .products {
+    grid-template-columns: 1fr;
+  }
+  .product {
+    text-align: center;
+  }
+  .products .product img {
+    width: 70%;
+  }
   /* Our team section */
   .team_container {
     width: var(--phone-width);
@@ -727,5 +849,21 @@ td {
   }
   .teams .team p {
     font-size: 1.8rem;
+  }
+
+  /* footer section */
+  .footer,
+  .empty_div {
+    width: var(--phone-width);
+  }
+  .footer_container {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
+  .footer_container p {
+    font-size: 1.25rem;
+  }
+  .footer_container li a {
+    font-size: 2.8rem;
   }
 }
