@@ -24,6 +24,7 @@ html {
   --laptop-width: 80.61%;
   --secondary-color: rgb(230, 83, 60);
   --button-color: rgb(230, 83, 60);
+  --phone-width: 90%;
 }
 /* common css style */
 body {
@@ -53,12 +54,11 @@ header {
     rgba(119, 119, 119, 0) 100%
   );
   background-color: black;
-  padding-top: 52px;
+  padding-top: 74px;
 }
 
 /* Nav section */
 nav {
-  border: 1px solid black;
   width: var(--laptop-width);
   margin: 0 auto 44px;
   display: flex;
@@ -102,10 +102,9 @@ nav li a:hover {
 .banner_container {
   width: var(--laptop-width);
   margin: 0px auto;
-  border: 1px solid black;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 100px;
+  grid-gap: 50px;
 }
 .banner_container h1 {
   font-size: 6.5rem;
@@ -124,18 +123,14 @@ nav li a:hover {
 }
 
 .banner_image_container {
-  border: 1px solid pink;
   width: 100%;
   text-align: right;
 }
 .banner_container .banner_right {
   position: relative;
 }
-.banner_container .banner_right img {
-  border: 10px solid green;
-}
+
 .video_tutorial_container {
-  border: 1px solid pink;
   display: flex;
   align-items: center;
   padding: 12px 30px;
@@ -147,6 +142,7 @@ nav li a:hover {
   position: absolute;
   bottom: 88px;
   left: 77px;
+  transition: all 1s;
 }
 .video_tutorial_container .video_tutorial_left {
   width: 40px;
@@ -167,7 +163,6 @@ nav li a:hover {
   margin-bottom: 0px;
 }
 .banner_container .workout_video_container {
-  border: 1px solid pink;
   align-items: center;
   padding: 12px 30px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -178,6 +173,7 @@ nav li a:hover {
   position: absolute;
   top: 143px;
   right: -95px;
+  transition: all 1s;
 }
 .banner_container .workout_video_container h2 {
   font-weight: 900;
@@ -188,4 +184,74 @@ nav li a:hover {
 }
 .banner_container .workout_video_container p {
   margin: 10px 0 0px;
+}
+
+/* Respinsive Design */
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 8px;
+  }
+  .btn {
+    padding: 14px 22px;
+  }
+  /* Nav bar */
+
+  nav {
+    width: var(--phone-width);
+  }
+  nav > ul {
+    border: 0;
+  }
+  .menu {
+    display: none;
+  }
+  .icon {
+    display: inline-block;
+  }
+  .icon i {
+    font-size: 2.5rem;
+  }
+
+  /* Banner section */
+  .banner_container {
+    width: var(--phone-width);
+    grid-template-columns: 1fr;
+  }
+  .banner_container h1 {
+    font-size: 4.9rem;
+    font-weight: 900;
+    line-height: 120%;
+    color: white;
+  }
+  .banner_image_container {
+    width: 100%;
+    text-align: center;
+  }
+  .banner_container .banner_right img {
+    width: 80%;
+  }
+
+  .banner_container .workout_video_container {
+    padding: 8px 16px;
+    top: 45px;
+    right: 15px;
+    font-size: 3.8rem;
+  }
+  .banner_container .workout_video_container p {
+    margin-top: 3px;
+  }
+  .video_tutorial_container {
+    bottom: 88px;
+    left: 77px;
+  }
+  .banner_container p {
+    margin-top: 12px;
+  }
+  .video_tutorial_container .video_tutorial_right h2 {
+    font-size: 2.5rem;
+  }
+  .video_tutorial_container {
+    bottom: 187px;
+    left: 16px;
+  }
 }
